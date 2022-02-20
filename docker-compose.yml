@@ -2,17 +2,24 @@ version: '3.7'
 services:
     # Run the node application
     user-app:
+        container_name: user-app
+        restart: unless-stopped
+        environment: 
+            - NODE_ENV=production
+        build:
+            context: ./user
+    admin-app:
         container_name: admin-app
         restart: unless-stopped
         environment: 
             - NODE_ENV=production
         build:
-            context: ./
+            context: ./admin
 
     # Run the caddy server        
     caddy:
         image: caddy/caddy:2.2.1-alpine
-        container_name: admin-caddy-service
+        container_name: caddy-service
         restart: unless-stopped
         ports:
             - "80:80"
