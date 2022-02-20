@@ -1,7 +1,7 @@
 require("dotenv").config();
 const express = require("express");
 var cors = require("cors");
-const path = require('path');
+const path = require("path");
 const mongoose = require("mongoose");
 const authMiddleware = require("./middlewares/routerMiddleware");
 const { userMedicine, userOrder, userRoute } = require("./routes/user routes");
@@ -22,8 +22,7 @@ app.use((req, res, next) => {
 
 app.use(cors());
 
-
-app.use(express.static(path.join(__dirname, 'user')));
+app.use(express.static(path.join(__dirname, "user")));
 
 app.use(express.json());
 
@@ -41,7 +40,7 @@ app.use((err, req, res, next) => {
   res.status(403).json(err);
 });
 
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 5000;
 server.listen(PORT, () => {
   console.log(`Connection Started on port ${PORT}`);
 });
