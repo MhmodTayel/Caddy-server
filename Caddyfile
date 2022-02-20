@@ -1,8 +1,6 @@
-# Replace example.com with your application's domain
-admin.pharmatech.cf {
-  # node-app1:5000 is the docker container running the Node.js application
-  # in our case it's exposed on port 4000
-  reverse_proxy node-app:4000  {
+pharmatech.cf {
+
+  reverse_proxy user-app:4000  {
     header_down Strict-Transport-Security max-age=31536000;
    }
 }
