@@ -8,14 +8,6 @@ services:
             - NODE_ENV=production
         build:
             context: ./
-    # Run the node application
-    node-app2:
-        container_name: node-app2
-        restart: unless-stopped
-        environment: 
-            - NODE_ENV=production
-        build:
-            context: ./another.js
 
     # Run the caddy server        
     caddy:
