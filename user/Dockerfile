@@ -1,6 +1,6 @@
 FROM node:14-alpine
 
-ADD ../package.json /tmp/package.json
+ADD package.json /tmp/package.json
 
 RUN cd /tmp && npm install -q
 
