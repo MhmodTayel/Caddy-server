@@ -1,1 +1,4 @@
+admin/.env
+user/.env
 node_modules
+# user/.env
