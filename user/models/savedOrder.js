@@ -1,23 +1,12 @@
 const mongoose = require('mongoose');
-const orderSchema = new mongoose.Schema({
+const savedOrderSchema = new mongoose.Schema({
     id: {
         type: Number,
         default: 1,
         required: true
     },
     client: { type: mongoose.Schema.Types.ObjectId, ref: 'Pharmacist' },
-
-    receipt_url:{
-        type:String
-    },
-    billing_detail: {
-        type:Object
-    },
-    created:{
-        type:Number
-    },
   
-    cost: Number,
     numberOfCat: Number,
     inProgress: Boolean,
     fulfilled: Boolean,
@@ -30,5 +19,5 @@ const orderSchema = new mongoose.Schema({
     
 },{timestamps: true}
 )
-const Order = mongoose.model("Order", orderSchema);
-module.exports = Order;
+const SavedOrder = mongoose.model("SavedOrder", savedOrderSchema);
+module.exports = SavedOrder;

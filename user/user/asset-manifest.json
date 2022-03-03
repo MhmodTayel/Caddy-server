@@ -1,14 +1,13 @@
 {
   "files": {
-    "main.css": "/static/css/main.2bd7b1da.css",
-    "main.js": "/static/js/main.224d7462.js",
-    "static/media/futuristic4.jpg": "/static/media/futuristic4.338169ed6c2b29f584de.jpg",
-    "static/media/regbackground.jpg": "/static/media/regbackground.89004636c39ae7612186.jpg",
+    "main.css": "/static/css/main.5c8df862.css",
+    "main.js": "/static/js/main.a4a24e5e.js",
     "static/media/slider(2).png": "/static/media/slider(2).acf9134665eced84e654.png",
+    "static/media/not-found.png": "/static/media/not-found.a6a5e7821979c008e7ee.png",
     "static/media/slider(1).jpg": "/static/media/slider(1).fcb9983eac089bb51420.jpg",
     "service-worker.js": "/service-worker.js",
-    "static/media/contemplative-reptile.jpg": "/static/media/contemplative-reptile.7ab4186592990b5e85bc.jpg",
     "static/media/men-care-1.jpg": "/static/media/men-care-1.649244fbbbf329df9bd8.jpg",
+    "static/media/img_1.png": "/static/media/img_1.774e633d97d941340c85.png",
     "static/media/baby-1.jpg": "/static/media/baby-1.50e7337323d91fe2abe7.jpg",
     "static/media/bgFooter.png": "/static/media/bgFooter.fb775192f513f91e5921.png",
     "static/media/personal-care-1.jpg": "/static/media/personal-care-1.5c24929ca96574327c63.jpg",
@@ -21,11 +20,11 @@
     "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/index.html",
-    "main.2bd7b1da.css.map": "/static/css/main.2bd7b1da.css.map",
-    "main.224d7462.js.map": "/static/js/main.224d7462.js.map"
+    "main.5c8df862.css.map": "/static/css/main.5c8df862.css.map",
+    "main.a4a24e5e.js.map": "/static/js/main.a4a24e5e.js.map"
   },
   "entrypoints": [
-    "static/css/main.2bd7b1da.css",
-    "static/js/main.224d7462.js"
+    "static/css/main.5c8df862.css",
+    "static/js/main.a4a24e5e.js"
   ]
 }
