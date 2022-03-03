@@ -11,7 +11,7 @@ const {
 } = require("./routes/store routes");
 const app = express();
 
-var server = require("http").createServer(app);
+var server = require("https").createServer(app);
 var io = require("socket.io")(server, { cors: { origin: "*" } });
 
 app.use((req, res, next) => {
