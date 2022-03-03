@@ -1,6 +1,7 @@
 require("dotenv").config();
 const express = require("express");
 var cors = require("cors");
+const path = require("path");
 const mongoose = require("mongoose");
 const authMiddleware = require("./middlewares/routerMiddleware");
 const { userMedicine, userOrder, userRoute } = require("./routes/user routes");
@@ -11,7 +12,7 @@ const {
 } = require("./routes/store routes");
 const app = express();
 
-// var server = require("https").createServer(app);
+// var server = require("http").createServer(app);
 // var io = require("socket.io")(server, { cors: { origin: "*" } });
 
 // app.use((req, res, next) => {
@@ -20,16 +21,16 @@ const app = express();
 // });
 
 app.use(cors());
+
+app.use(express.static(path.join(__dirname, "client")));
+
 app.use(express.json());
 
 mongoose.connect(process.env.CONNECTION_STRING);
 
-
-
 app.use(authMiddleware)
-app.use('/users',[userRoute,userMedicine,userOrder])
-app.use('/store',[storeAdminRoute,storeMedRoute,storeOrderRoute])
-
+app.use("/users", [userRoute, userMedicine, userOrder]);
+app.use("/store", [storeAdminRoute, storeMedRoute, storeOrderRoute]);
 
 app.use("*", (req, res) => {
   res.status(404).end();
