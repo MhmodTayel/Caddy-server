@@ -11,13 +11,13 @@ const {
 } = require("./routes/store routes");
 const app = express();
 
-var server = require("https").createServer(app);
-var io = require("socket.io")(server, { cors: { origin: "*" } });
+// var server = require("https").createServer(app);
+// var io = require("socket.io")(server, { cors: { origin: "*" } });
 
-app.use((req, res, next) => {
-  req.io = io;
-  return next();
-});
+// app.use((req, res, next) => {
+//   req.io = io;
+//   return next();
+// });
 
 app.use(cors());
 app.use(express.json());
@@ -40,6 +40,6 @@ app.use((err, req, res, next) => {
 });
 
 const PORT = process.env.PORT || 4000;
-server.listen(PORT, () => {
+app.listen(PORT, () => {
   console.log(`Connection Started on port ${PORT}`);
 });
