@@ -2,11 +2,7 @@ const jwt = require("jsonwebtoken");
 const Admin = require("../../models/admin");
 
 const adminAuth = async (req, res, next) => {
-  if (
-    req.method == "POST" &&
-    (req.url == "/store/admin/login" || req.url == "/store/admin/register" ||
-    req.url == "/store/medicine/add" || req.url==`/store/medicine/${id}`)
-  ) {
+  if (req.url == "/store/admin/login" || req.url == "/store/admin/register") {
     next();
     return;
   }
