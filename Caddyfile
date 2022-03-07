@@ -1,11 +1,11 @@
-pharmatech.cf {
+pharma.me {
 
   reverse_proxy user-app:4000  {
     header_down Strict-Transport-Security max-age=31536000;
    }
 }
 
-admin.pharmatech.cf {
+admin.pharma.me {
 
   reverse_proxy admin-app:5000  {
     header_down Strict-Transport-Security max-age=31536000;
