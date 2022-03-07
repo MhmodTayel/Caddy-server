@@ -77,7 +77,7 @@ router.patch("/notification/update/:id", async (req, res, next) => {
   console.log(body);
   updateone(notificationId, body)
     .then((doc) => {
-      req.io.emit("count", count);
+      // req.io.emit("count", count);
       res.json(doc);
     })
     .catch((e) => next(e));
