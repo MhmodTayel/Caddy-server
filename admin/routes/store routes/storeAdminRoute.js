@@ -14,12 +14,12 @@ router.post("/admin/register", (req, res, next) => {
 router.post("/admin/login", async (req,res, next) => {
   const { username, password } = req.body;
   const token = await login({ username, password },next);
-  console.log(token,'token')
   res.json(token);
 });
 
 
 router.get("/admin/details", async (req,res, next) => {
+    console.log(req.admin,'req.admin')
     res.json(req.admin);
   });
   

@@ -3,7 +3,7 @@ const express = require("express");
 var cors = require("cors");
 const path = require("path");
 const mongoose = require("mongoose");
-const authMiddleware = require("./middlewares/routerMiddleware");
+const authMiddleware = require('./middlewares/store middleware/adminMiddleware');
 const { userMedicine, userOrder, userRoute } = require("./routes/user routes");
 const {
   storeAdminRoute,
@@ -28,7 +28,7 @@ app.use(express.json());
 
 mongoose.connect(process.env.CONNECTION_STRING);
 
-// app.use(authMiddleware)
+app.use(authMiddleware)
 // app.use("/users", [userRoute, userMedicine, userOrder]);
 app.use("/store", [storeAdminRoute, storeMedRoute, storeOrderRoute]);
 
@@ -40,7 +40,7 @@ app.use((err, req, res, next) => {
   res.status(403).json(err);
 });
 
-const PORT = process.env.PORT || 80;
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Connection Started on port ${PORT}`);
 });
