@@ -3,7 +3,7 @@ const express = require("express");
 var cors = require("cors");
 const path = require("path");
 const mongoose = require("mongoose");
-const authMiddleware = require("./middlewares/routerMiddleware");
+const authMiddleware = require('./middlewares/user middleware/userMiddleware');
 const { userMedicine, userOrder, userRoute } = require("./routes/user routes");
 const {
   storeAdminRoute,
@@ -22,7 +22,7 @@ const app = express();
 
 app.use(cors());
 
-app.use(express.static(path.join(__dirname, "user")));
+app.use(express.static(path.join(__dirname, "public")));
 
 app.use(express.json());
 
